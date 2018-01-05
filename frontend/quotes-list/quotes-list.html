@@ -1,0 +1,18 @@
+<div class="searchBar input-group input-group-lg">
+    <input type="text" class="form-control" ng-model="searchString" placeholder="Search any quote or author">
+</div>
+<br>
+<div>
+
+    <div  ng-class="{'some-class':hovering}"
+          class="quoteContainer" ng-repeat="quote in vm.quotes | searchAuthorAndBody: searchString" ng-mouseenter="vm.changeColor(quote, true);"
+         ng-mouseleave="vm.changeColor(quote,false);">
+        <img ng-src="{{quote.author_photo || ('http://via.placeholder.com/220?text=Not+Found')}}" class="rounded-circle">
+        <div class="textExtraContainer">
+            <div class="textContainer">
+                <p class="quoteBody oldText">"{{quote.body}}"</p>
+                <p class="quoteAuthor oldText">- {{quote.author}}</p>
+            </div>
+        </div>
+    </div>
+</div>

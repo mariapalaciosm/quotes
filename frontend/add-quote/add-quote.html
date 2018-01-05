@@ -1,0 +1,16 @@
+<form name="addQuoteForm">
+    <p class="titles">Create quote</p>
+    <br>
+    <div class="alert alert-warning" ng-show="vm.warning">
+      <strong>Warning!</strong> You need to login before you add a new quote.
+    </div>
+    <input name="authorName" type="text" class="form-control" ng-model="vm.author.name" placeholder="Author name" required>
+    <br>
+    <input name="authorPhoto" type="text" class="form-control" ng-model="vm.author.photo" placeholder="Author photo link">
+    <br>
+    <img class="rounded-circle" ng-src="{{vm.author.photo}}">
+    <input name="quote" type="text" class="form-control" ng-model="vm.quote" placeholder="Quote" required>
+    <br>
+    <button class="btn btn-primary btn-lg btn-block" ng-disabled="addQuoteForm.$invalid" ng-click="vm.submitQuote();">Send
+    </button>
+</form>

@@ -1,0 +1,29 @@
+{
+  "name": "realserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/index.js",
+    "postinstall": "bower install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular-cookies": "^1.6.6",
+    "body-parser": "^1.18.2",
+    "bower": "^1.8.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.0",
+    "express-winston": "^2.4.0",
+    "jsonwebtoken": "^8.1.0",
+    "mysql": "^2.15.0",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1"
+  }
+}

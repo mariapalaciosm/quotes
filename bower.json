@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "homepage": "https://github.com/",
+  "authors": [
+    "Maria Palacios <mariapalaciosmunyoz@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.6",
+    "angular-bootstrap": "^2.5.0",
+    "angular-ui-router": "ui-router#^1.0.10"
+  }
+}

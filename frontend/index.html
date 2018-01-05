@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="quotesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body ng-controller="mainController as vm">
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-cookies.js"></script>
+  <script src="app.js"></script>
+  <script src="routes.js"></script>
+  <script src="services.js"></script>
+  <script src="quotes-list/quotes-list.component.js"></script>
+  <script src="add-quote/add-quote.component.js"></script>
+  <script src="login/login.component.js"></script>
+
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand oldText" href="#">Quotes</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="addQuote">Create quote</a>
+                </li>
+                <li class="nav-item right nav-link">
+                  <button ui-sref="login" type="button" class="btn  navbar-btn btn-default ">
+                          <i class="material-icons" style="font-size:12px;">person</i>
+                          <span class="btnLogin"> {{ vm.user }} </span>
+                  </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ui-view></ui-view>
+</div>
+
+
+
+</body>
+</html>

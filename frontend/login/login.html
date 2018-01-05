@@ -1,0 +1,18 @@
+<form name="loginForm" novalidate>
+    <p class="titles">Login</p>
+    <br>
+    <div class="form-group" ng-class="{ 'has-error' : loginForm.email.$error.email && loginForm.email.$touched }">
+        <input name="email" type="email" class="form-control" ng-class="{'is-invalid': (loginForm.email.$error.email && loginForm.email.$touched), 'is-valid': (!loginForm.email.$pristine && !(loginForm.email.$error.email && loginForm.email.$touched))}" ng-model="vm.email" placeholder="Email" required>
+        <div class="invalid-feedback" ng-show="loginForm.email.$error.email && loginForm.email.$touched">The email format is incorrect</div>
+        <!--<p ng-show="loginForm.email.$error.email && loginForm.email.$touched" class="help-block">The email format is incorrect</p>-->
+    </div>
+
+
+    <br>
+    <input name="password" type="password" class="form-control" ng-model="vm.password" placeholder="Password" required>
+    <span class="error" ng-show="loginForm.password.$invalid && loginForm.password.$touched">You need to type a password</span>
+    <br>
+    <button ng-if="!vm.log"  class="btn btn-success btn-lg" ng-disabled="loginForm.$invalid" ng-click="vm.login();">Login</button>
+    <button ng-if="vm.log"   class="btn btn-danger btn-lg" ng-disabled="loginForm.$invalid" ng-click="vm.logout();">Logout</button>
+
+</form>
