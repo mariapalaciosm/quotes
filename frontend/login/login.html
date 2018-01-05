@@ -10,7 +10,7 @@
 
     <br>
     <input name="password" type="password" class="form-control" ng-model="vm.password" placeholder="Password" required>
-    <span class="error" ng-show="loginForm.password.$invalid && loginForm.password.$touched">You need to type a password</span>
+    <div class="alert alert-warning" ng-show="loginForm.password.$invalid && loginForm.password.$touched">You need to type a password</div>
     <br>
     <button ng-if="!vm.log"  class="btn btn-success btn-lg" ng-disabled="loginForm.$invalid" ng-click="vm.login();">Login</button>
     <button ng-if="vm.log"   class="btn btn-danger btn-lg" ng-disabled="loginForm.$invalid" ng-click="vm.logout();">Logout</button>
