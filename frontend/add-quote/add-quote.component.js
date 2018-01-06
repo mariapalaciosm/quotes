@@ -1,4 +1,4 @@
-function AddQuoteController(QuotesFactory, $cookies, $window, $rootScope) {
+function AddQuoteController(QuotesFactory, $cookies, $window, $rootScope, $route) {
     var vm = this;
     vm.token = $cookies.get('token');
     if (vm.token === undefined){
@@ -17,6 +17,7 @@ function AddQuoteController(QuotesFactory, $cookies, $window, $rootScope) {
             $window.alert('You have added a new quote succesfully');
             vm.author = {};
             vm.quote = undefined;
+            $route.reload();
 
           }, function errorCallback() {
             $window.alert('The quote cannot be added');
